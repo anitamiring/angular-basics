@@ -1,6 +1,6 @@
 # angular-basics
 
-Angular is ***JavaScript Framework*** which allowes you to create reactive ***Single-Page-Applications*** (SPAs). Single page means it is all about one html page which is updated in the browser. If there is nead to use database it doesn't interrupt page flow.  
+Angular is ***JavaScript Framework*** which allowes to create reactive ***Single-Page-Applications*** (SPAs). Single page means it is all about one html page which is updated in the browser. If there is nead to use database it doesn't interrupt page flow.  
 
 ### Angular Versions 
 
@@ -9,7 +9,7 @@ Angular is ***JavaScript Framework*** which allowes you to create reactive ***Si
  Angular 4 ==> ... ==> New version every 6 month ==>
  **Angular 9** (now)
 
-### Instalation 
+### Angular Installation 
 
 * Require node.js preinstalled.
 * Angular CLI - globally 
