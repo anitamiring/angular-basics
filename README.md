@@ -8,3 +8,19 @@ Angular is ***JavaScript Framework*** which allowes you to create reactive ***Si
  **Angular 2** ==> realeased in 2016 ==> (Angular 3 is skipped) ==>
  Angular 4 ==> ... ==> New version every 6 month ==>
  **Angular 9** (now)
+
+### Instalation 
+
+* Require node.js preinstalled.
+* Angular CLI - globally 
+```
+npm install -g @angular/cli@latest 
+```
+* Create and run new project 
+```
+ng new project-name
+cd project-name
+ng serve 
+```
+
+
