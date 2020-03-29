@@ -23,4 +23,32 @@ cd project-name
 ng serve 
 ```
 
+### TypeScript
+
+Angular is meant to use with TypeScript. TS has more features then vanilla JS, like 
+types, classes, interfaces and so on. TS is not compiled in the browser, so before that it is 
+compiled to JS, and then JS is compiled in the browser.
+
+### Bootstrap Setup
+
+* Installation 
+```
+npm install --save bootstrap@3 
+```
+* Adding new styling to the project
+```
+angular.json 
+...
+"styles": [
+"node_modules/bootstrap/dist/css/bootstrap.min.css",
+"src/styles.css"
+]
+...
+```
+
+
+
+
+
+
 
