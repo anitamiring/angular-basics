@@ -134,7 +134,45 @@ import {ServerComponent} from './server/server.component'; <--- import custom co
 export class AppModule {
 }
 ```
-
+### Create component from CLI
+```
+ng g c name 
+```
+### Component selectors 
+Select by element: 
+```
+selector: 'app-server'
+```
+Use this component: 
+```
+<app-server></app-server>
+```
+Attribute selector:
+```
+selector: '[app-server]'
+```
+Use this component:
+```
+<div app-server></div>
+```
+Select by class:
+```
+selector: '.app-server'
+```
+Use this component:
+```
+<div class = "app-server"><div>
+```
+### Databinding 
+**Databinding** stands for communication of the **Template (HTML)** with **TS Code (Business Logic)**
+##### Types of communication 
+Output data: TS Code --> Template(User)
+- String interpolation ( *{{ data }}* ) 
+- Property Binding ( *[property] = "data"* )
+React to (User) events:
+- Event Binding ( *(event) = "expression"* )
+Combinatio of Both:
+- Two-Way-Binding ( *[(NgModel)] = "data"* )
 
 
 
