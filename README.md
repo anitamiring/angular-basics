@@ -109,8 +109,8 @@ import {Component} from '@angular/core';
   templateUrl: './server.component.html'
 })
 ```
-* To use new **Component** in our App, we need to declare it. This simple App is created from one  **Module**. **Module** 
-is another ts decorator which create bundle package from all components. As previously said bootstrap property says which component bundle whole application, and it is AppComponent. But we need to declare all other components as well. 
+* To use new **Component** in our App, we need to declare it. This simple App is created from one  **Module**. 
+* **Module** is another ts decorator which create bundle package from all components. As previously said bootstrap property says which component bundle whole application, and it is AppComponent. But we need to declare all other components as well. 
 ```
 app.module.ts 
 import {BrowserModule} from '@angular/platform-browser';
@@ -133,8 +133,8 @@ import {ServerComponent} from './server/server.component'; <--- import custom co
 })
 export class AppModule {
 }
-
 ```
+
 
 
 
