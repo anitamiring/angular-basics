@@ -167,14 +167,34 @@ Use this component:
 **Databinding** stands for communication of the **Template (HTML)** with **TS Code (Business Logic)**
 #### Types of communication 
 Output data: TS Code --> Template(User)
-* **String interpolation** ( *{{ data }}* ) 
+* **String Interpolation** ( *{{ data }}* ) 
 * **Property Binding** ( *[property] = "data"* )
 
 React to (User) events:
 * **Event Binding** ( *(event) = "expression"* )
 
-Combinatio of Both:
+Combination of Both:
 * **Two-Way-Binding** ( *[(NgModel)] = "data"* )
+
+### String Interpolation 
+String interpolation can be use with any ts code which can be resolve to the string int the end. We can't use multiline code here. We can write simple strings, use class properties or use functions which will be resolve to a string.
+```
+server.component.ts
+export class ServerComponent {
+
+  serverID = 10;
+  serverStatus = 'offline';
+
+  getServerStatus()
+  {
+    return this.serverStatus;
+  }
+}
+```
+```
+server.component.html
+<p> {{ 'Server' }} with ID {{ serverID }} is {{ getServerStatus() }} </p>
+```
 
 
 
