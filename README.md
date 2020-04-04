@@ -167,14 +167,14 @@ Use this component:
 **Databinding** stands for communication of the **Template (HTML)** with **TS Code (Business Logic)**
 #### Types of communication 
 Output data: TS Code --> Template(User)
-* String interpolation ( *{{ data }}* ) 
-* Property Binding ( *[property] = "data"* )
+* **String interpolation** ( *{{ data }}* ) 
+* **Property Binding** ( *[property] = "data"* )
 
 React to (User) events:
-* Event Binding ( *(event) = "expression"* )
+* **Event Binding** ( *(event) = "expression"* )
 
 Combinatio of Both:
-* Two-Way-Binding ( *[(NgModel)] = "data"* )
+* **Two-Way-Binding** ( *[(NgModel)] = "data"* )
 
 
 
