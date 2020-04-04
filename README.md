@@ -218,8 +218,8 @@ servers.component.html
 ```
 
 ### Event Binding (event) = "expression"
+We simply take event name into parenthesis () and assign some TS code to it. So the code will be execute when this event occures. 
 ```
-We simply take event name into parenthasis () and assign some TS code to it.
 servers.component.html
 <button 
     class = "btn btn-primary"
@@ -227,6 +227,40 @@ servers.component.html
     (click) = "onServerCreated()">  <---- Event Binding
     Add new Server 
 </button>
+```
+Sample with passing *$event* data to the function. So, we have function which is triggered when some event occures. We can use data which this event emit in our TS function. Each event produce different data, eg. input emit some text data. 
+```
+servers.component.html
+<label>Server name</label>
+<input 
+    type = "text" 
+    class = "form-control"
+    (input) = "onChangeServerName($event)">  <---- Passing event data to the function 
+<p>{{ serverName }}</p>
+```
+### Two-Way-Binding [(NgModel)] = "data"
+FormsModule is required to use Two-Way-Binding. 
+```
+app.module.ts
+import {FormsModule} from '@angular/forms';
+@NgModule({
+  ...
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  ...
+})
+```
+Two-Way-Binding gives us opportunity to react for every change was made. On eg. below we change the value of sevr name every time input event occures as well as the input value change every time serverName was changed. 
+```
+servers.component.html
+<label>Server name (Two Way Binding)</label>
+<input 
+    type = "text" 
+    class = "form-control"
+    [(ngModel)] = "serverName">  <---- Two-Way-Binding
+<p>{{ serverName }}</p>
 ```
 
 
