@@ -217,7 +217,17 @@ servers.component.html
 </button>
 ```
 
-
+### Event Binding (event) = "expression"
+```
+We simply take event name into parenthasis () and assign some TS code to it.
+servers.component.html
+<button 
+    class = "btn btn-primary"
+    [disabled] = "!allowNewServer"
+    (click) = "onServerCreated()">  <---- Event Binding
+    Add new Server 
+</button>
+```
 
 
 
