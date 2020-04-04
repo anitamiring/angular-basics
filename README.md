@@ -90,6 +90,52 @@ export class AppModule {
 ```
 Then Angular looks for the selector of the bootstraped component. And this is how the circle close. 
 
+### Create new component 
+* All custom components are placed in the root component, which bootstrap whole application 
+* Component is basically normal ts class 
+```
+server.component.ts
+export class ServerComponent {
+
+}
+```
+* Then we have to tell it is not just a normal ts class but something special. There we use decorators - *** Component *** decorator in this case. Decorator is a ts feature which allows us to enhance ts classes. 
+```
+server.component.ts 
+import {Component} from '@angular/core';
+
+@Component({
+  selector: 'app-server',
+  templateUrl: './server.component.html'
+})
+```
+* To use new *** Component *** in our App, we need to declare it. This simple App is created from one  
+*** Module ***. *** Module *** 
+is another ts decorator which create bundle package from all component. As previously said bootstrap property says which component bundle whole application, and it is AppComponent. But we need to declare all other components as well. 
+```
+app.module.ts 
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {AppComponent} from './app.component';
+import {ServerComponent} from './server/server.component'; <--- import custom component 
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ServerComponent <---- Custom component declaration 
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+}
+
+```
 
 
 
