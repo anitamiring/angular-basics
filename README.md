@@ -169,8 +169,10 @@ Use this component:
 Output data: TS Code --> Template(User)
 * String interpolation ( *{{ data }}* ) 
 * Property Binding ( *[property] = "data"* )
+
 React to (User) events:
 * Event Binding ( *(event) = "expression"* )
+
 Combinatio of Both:
 * Two-Way-Binding ( *[(NgModel)] = "data"* )
 
