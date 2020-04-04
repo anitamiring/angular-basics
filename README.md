@@ -45,6 +45,53 @@ angular.json
 ]
 ...
 ```
+### How Angular App gets loaded and started 
+* Angular create SPAs
+* index.html is the file (single page) served by server, with root component in it
+```
+<body>
+  <app-root></app-root>
+</body>
+```
+* root component contains and binds all custom component in our app 
+```
+app.component.ts 
+...
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+...
+```
+* ng serve process rebuild our project - Angular CLI adds js scripts bundles and automatically adds right imports into index.html
+* main.ts is the first code which gets executed. Here we create platform - an entry point for Angular on web page. Each page has only one platform. There potentially can be many applications on one platform. Each application is created from the module using bootstrapModule method. So the statement shown below first creates a platform and then the application instance. 
+```
+main.ts
+platformBrowserDynamic().bootstrapModule(AppModule)
+```
+When the application is being created Angular checks the bootstrap property of the module used to bootstrap the application (AppModule):
+```
+app.module.ts 
+@NgModule({
+  declarations: [
+    AppComponent,
+    ServerComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent] <-- bootstrap property 
+})
+export class AppModule {
+}
+```
+Then Angular looks for the selector of the bootstraped component. And this is how the circle close. 
+
+
+
 
 
 
