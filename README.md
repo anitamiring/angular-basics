@@ -176,7 +176,7 @@ React to (User) events:
 Combination of Both:
 * **Two-Way-Binding** ( *[(NgModel)] = "data"* )
 
-### String Interpolation 
+### String Interpolation {{ data }}
 String interpolation can be use with any ts code which can be resolve to the string int the end. We can't use multiline code here. We can write simple strings, use class properties or use functions which will be resolve to a string.
 ```
 server.component.ts
@@ -196,6 +196,26 @@ server.component.html
 <p> {{ 'Server' }} with ID {{ serverID }} is {{ getServerStatus() }} </p>
 ```
 
+### Property Binding [property] = "data"
+Property binding just take property of the HTML element and assign our TS property to that. Properties are updated **dynamically**. This is one of advantage using Angular, it makes really easy to interact with DOM to change properties during runtime. 
+```
+servers.component.ts
+  allowNewServer: boolean = false;
+
+  constructor() { 
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
+```
+```
+servers.component.html
+<button 
+    class = "btn btn-primary"
+    [disabled] = "!allowNewServer">  <---- Property Binding
+    Add new Server 
+</button>
+```
 
 
 
